@@ -6,15 +6,13 @@ import * as actions from '../src/actions/index';
 import './App.css';
 
 class App extends Component {
-
   componentDidMount() {
     this.props.countriesList()
   }
-
-  render() {
+render() {
     return (
-      <div>Hej</div>
-    )
+      <div>Tablice zostały załadowane do Stora</div>
+    );
   };
 }
 

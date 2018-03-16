@@ -3,8 +3,7 @@ import { combineReducers } from 'redux';
 import countries from '../reducers/countries_reducer';
 
 const rootReducer = combineReducers({
-  countries
+  countries,
 });
 
 export default rootReducer;
-

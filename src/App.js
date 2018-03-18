@@ -1,26 +1,29 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import * as actions from '../src/actions/index';
+import PropTypes from 'prop-types';
 
-import DisplayCountryComponent from './components/DisplayCountriesComponent/DisplayCountriesComponent'
+import Country from './components/DisplayCountriesComponent/DisplayCountriesComponent';
 
 import './App.css';
 
 class App extends Component {
+
   componentDidMount() {
-    this.props.countriesList()
+    this.props.getCountriesList();
   }
 
   render() {
     return (
       <div>
-        <div>Tablice zostały załadowane do Stora</div>
-        <DisplayCountryComponent/>
+        {<Country/>}
       </div>
 
     );
-  };
+  }
 }
+
+App.propTypes = { getCountriesList: PropTypes.func.isRequired };
 
 const mapStateToProps = (state) => {
   return {
